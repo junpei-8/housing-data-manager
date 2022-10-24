@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "housing-data-manager": {
+      "hosting": {
+        "housing-data-manager": [
+          "housing-data-manager"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "housing-data-manager"
+  }
+}
