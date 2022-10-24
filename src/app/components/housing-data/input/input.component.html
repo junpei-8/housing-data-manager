@@ -1,0 +1,28 @@
+<form (submit)="scrapeHousingData($event)">
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>URL</mat-label>
+    <input matInput [formControl]="urlForm" placeholder="https://~" required />
+    <button
+      class="submit-button"
+      matSuffix
+      mat-icon-button
+      class="submit-button"
+      type="submit"
+      title="Scrape Housing Data"
+      aria-label="Scrape housing data"
+      [disabled]="urlForm.invalid"
+    >
+      <svg
+        class="submit-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        height="24"
+        width="24"
+        fill="currentColor"
+      >
+        <path d="M3 20V4l19 8Zm2-3 11.85-5L5 7v3.5l6 1.5-6 1.5Zm0 0V7v6.5Z" />
+      </svg>
+    </button>
+    <mat-hint>対応サイト： ニフティ不動産, Suumo</mat-hint>
+    <mat-error *ngIf="urlForm.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+</form>

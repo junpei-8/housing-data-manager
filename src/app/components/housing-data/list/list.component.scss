@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  overflow: auto;
+}
+
+.table-row {
+  display: table-row;
+  vertical-align: middle;
+  transform: scale(1);
+}
+
+.table-cell {
+  min-width: 120px;
+  min-width: fit-content;
+  white-space: nowrap;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.ripple-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.pagination {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+}

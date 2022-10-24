@@ -1,0 +1,26 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-view {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.input {
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.list {
+  margin-bottom: 24px;
+}

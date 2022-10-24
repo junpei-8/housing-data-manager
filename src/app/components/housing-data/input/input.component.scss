@@ -1,0 +1,21 @@
+@use '../../../../theme';
+
+:host {
+  display: block;
+}
+
+.form-field {
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  .mat-focused & {
+    color: theme.get-color-from-palette(theme.$primary, 500);
+  }
+}
+
+.submit-icon {
+  display: block;
+}

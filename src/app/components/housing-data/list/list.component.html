@@ -1,0 +1,38 @@
+<table class="table" mat-table [dataSource]="dataSource" matSort>
+  <ng-container
+    *ngFor="let key of displayedDataColumns"
+    [matColumnDef]="key"
+    [sticky]="key === 'rent'"
+  >
+    <th
+      class="table-cell"
+      mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header
+      sortActionDescription="Sort by number"
+    >
+      {{ getDataColumnLabel(key) }}
+    </th>
+    <td class="table-cell" mat-cell *matCellDef="let element">
+      {{ element[key] }}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedDataColumns; sticky: true"></tr>
+  <tr
+    #tableRow
+    class="mat-header-row table-row"
+    *matRowDef="let row; columns: displayedDataColumns"
+  >
+    <ng-container cdkCellOutlet></ng-container>
+    <a class="ripple-overlay" matRipple [matRippleTrigger]="tableRow"></a>
+  </tr>
+</table>
+
+<mat-paginator
+  mat-footer-row
+  class="pagination"
+  [pageSizeOptions]="[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]"
+  showFirstLastButtons
+  aria-label="表示数"
+></mat-paginator>

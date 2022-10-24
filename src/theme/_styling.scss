@@ -1,0 +1,6 @@
+@use '@angular/material' as mat;
+@use './theming' as *;
+@use './typography' as *;
+
+@include mat.core($typography);
+@include mat.all-component-themes($theme); // <-- とりあえず全て
